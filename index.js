@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended:false}))
 app.use('/',staticRoute);
 
 
-app.use("/url", urlRoute)
+app.use("/", urlRoute)
 
 app.listen(PORT, () => {
     console.log(`Server started at PORT: ${PORT}`);
