@@ -1,5 +1,5 @@
 import express from 'express'
-const router = express.Router()
+const router = express.Router();
 import URL from "../models/url.js"
 
 router.get('/', async (req,res)=>{
@@ -9,5 +9,12 @@ router.get('/', async (req,res)=>{
         urls: allurls,
     });
 });
+
+router.get('/signup',(req,res)=>{
+    return res.render('signup');
+})
+router.get('/login',(req,res)=>{
+    return res.render('login');
+})
 
 export default router
